@@ -30,6 +30,11 @@ public class Romain {
 		}
 	}
 	
+	public static void main(String[] args) {
+		Romain rom = new Romain("rom", 8);
+		rom.parler("Bonjour");
+		rom.recevoirCoup(8);
+	}
 
 }
 
