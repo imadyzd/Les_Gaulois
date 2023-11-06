@@ -6,34 +6,43 @@ public class Romain {
 	private String nom;
 	private int force;
 	
+	
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
+		assert this.force > 0 :"La force doit √©tre positive";
 	}
+	
 	
 	public String getNom() {
 		return nom;
 	}
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "´ " + texte + "ª");
+		System.out.println(prendreParole() + "ÔøΩ " + texte + "ÔøΩ");
 	}
 	private String prendreParole() {
 		return "Le romain " + nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
+		int forceRom = force; 
+		assert forceRom > 0 : "La force d'un romain est toujours positive";
+		
 		force -= forceCoup;
 		if (force > 0) {
-			parler("AÔe");
+			parler("Aie");
 		} 
 		else {
 			parler("J'abandonne...");
 		}
+		assert forceRom > force : "La force a diminu√©";
 	}
 	
 	public static void main(String[] args) {
-		Romain rom = new Romain("rom", 8);
-		rom.parler("Bonjour");
-		rom.recevoirCoup(8);
+		Romain minus = new Romain("minus", 6);
+		
+		minus.parler("Bonjour");
+		minus.recevoirCoup(8);
+		
 	}
 
 }
