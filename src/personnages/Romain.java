@@ -5,6 +5,9 @@ public class Romain {
 	
 	private String nom;
 	private int force;
+	private Equipement[] equipements;
+	private int nbEquipement = 0;
+	
 	
 	
 	public Romain(String nom, int force) {
