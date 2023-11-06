@@ -42,7 +42,7 @@ public class Romain {
 		
 		minus.parler("Bonjour");
 		minus.recevoirCoup(8);
-		
+		System.out.println(Equipement.CASQUE);
 	}
 
 }
